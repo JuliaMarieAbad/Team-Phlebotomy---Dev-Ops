@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Information</title>
+    <style>
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-image: url('C:/Users/Julia/Documents/4th year - 1st sem/CPE 028/Option 2/BG.png');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; 
+            color: #fff; 
+            padding: 20px;
+            margin: 0;
+            height: 100vh; 
+            box-sizing: border-box;
+            text-align: center; 
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #results {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #181e52;
+            background-color: rgba(255, 254, 254, 0.8);
+            color: #181e52; 
+            transition: background-color 0.3s, color 0.3s;
+            max-width: 500px; 
+            width: 100%;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        body.dark-mode #results {
+            background-color: rgba(68, 68, 68, 0.8);
+            border-color: #555;
+            color: #fff; 
+        }
+
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            input, button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        
+        input, button, label {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>IP Address Information</h1>
+
+    <label>
+        <input type="checkbox" id="darkModeToggle"> Dark Mode
+    </label>
+    
+    <input type="text" id="ipInput" placeholder="Enter IP Address">
+    <button id="submitBtn">Get IP Info</button>
+    
+    <div id="results"></div>
+
+    <h2>Recent Searches</h2>
+    <ul id="searchesList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
